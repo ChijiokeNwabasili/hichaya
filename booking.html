@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Book your cleaning with Hichaya in just a few clicks. Select your service, schedule your time, and let us handle the rest."
+    />
+    <meta name="author" content="Chijioke Nwabasili" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Book a Cleaning - Hichaya | Reliable Cleaning for Homes & Offices"
+    />
+    <meta
+      property="og:description"
+      content="Book your cleaning with Hichaya in just a few clicks. Select your service, schedule your time, and let us handle the rest."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hichaya" />
+    <meta property="og:url" content="https://hichaya.vercel.app/booking.html" />
+    <meta
+      name="twitter:title"
+      content="Book a Cleaning - Hichaya | Reliable Cleaning for Homes & Offices"
+    />
+    <meta
+      name="twitter:description"
+      content="Book your cleaning with Hichaya in just a few clicks. Select your service, schedule your time, and let us handle the rest."
+    />
+    <title>
+      Book a Cleaning - Hichaya | Reliable Cleaning for Homes & Offices
+    </title>
+    <link rel="canonical" href="https://hichaya.vercel.app/booking.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="image/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <a href="/" class="logo">
+          <img
+            src="image/hichaya-logo.webp"
+            alt="Hichaya Logo - Reliable Cleaning for homes & offices"
+            width="344"
+            height="102"
+          />
+        </a>
+        <!-- Hamburger Menu -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <!-- Navbar -->
+        <nav aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="about.html" aria-label="Learn more about Hichaya"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="services.html" aria-label="Explore our cleaning services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" aria-label="Get in touch with us"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="header-cta-btn cta-mobile"
+                >Get a Free Quote</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="header-cta-btn cta-desktop"
+          >Get a Free Quote</a
+        >
+      </div>
+    </header>
+
+    <main class="page-content">
+      <!-- Booking -->
+      <section id="booking">
+        <div class="container">
+          <h2 class="booking-title">Schedule Your Spotless Cleaning</h2>
+          <p class="booking-subtitle">
+            Choose your service, date, and time, and let our team handle the
+            rest. We'll confirm your booking quickly so you can relax knowing
+            your space is in trusted hands.
+          </p>
+          <!-- Booking Form -->
+          <form id="booking-form" method="post" aria-label="Booking Form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-name">Full Name:</label>
+                <input
+                  type="text"
+                  id="booking-name"
+                  name="booking-name"
+                  required
+                  placeholder="Your full name"
+                  autocomplete="off"
+                />
+                <div
+                  class="error-message"
+                  id="booking-name-error"
+                  role="alert"
+                ></div>
+              </div>
+              <div class="form-group">
+                <label for="booking-email">Email:</label>
+                <input
+                  type="email"
+                  id="booking-email"
+                  name="booking-email"
+                  required
+                  placeholder="Your email"
+                  autocomplete="off"
+                />
+                <div
+                  class="error-message"
+                  id="booking-email-error"
+                  role="alert"
+                ></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="booking-phone">Phone Number:</label>
+                <input
+                  type="tel"
+                  id="booking-phone"
+                  name="booking-phone"
+                  required
+                  placeholder="Your phone number"
+                  autocomplete="off"
+                />
+                <div
+                  class="booking-error-message"
+                  id="booking-phone-error"
+                  role="alert"
+                ></div>
+              </div>
+              <div class="form-group">
+                <label for="cleaning-address">Address:</label>
+                <input
+                  type="text"
+                  id="cleaning-address"
+                  name="cleaning-address"
+                  required
+                  placeholder="Street, City, ZIP"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cleaning-service">Which Service?</label>
+                <select id="cleaning-service" name="cleaning-service" required>
+                  <option value="" disabled selected>
+                    -- Select a service --
+                  </option>
+                  <option value="home-cleaning">Standard Home Cleaning</option>
+                  <option value="deep-cleaning">Deep Cleaning</option>
+                  <option value="office-cleaning">
+                    Office & Workspace Cleaning
+                  </option>
+                  <option value="move-in-move-out">Move-In / Move-Out</option>
+                  <option value="post-construction">
+                    Post-Construction Cleaning
+                  </option>
+                  <option value="airbnb">Short-Stay / Airbnb Turnover</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="recurring-service">Recurring Service:</label>
+                <select
+                  id="recurring-service"
+                  name="recurring-service"
+                  required
+                >
+                  <option value="" selected disabled>
+                    -- Select frequency --
+                  </option>
+                  <option value="one-time">One-time</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="biweekly">Bi-weekly</option>
+                  <option value="monthly">Monthly</option>
+                </select>
+                <small class="helper-text"
+                  >Keep your space consistently spotless with scheduled
+                  cleanings.</small
+                >
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cleaning-date">Preferred Date:</label>
+                <input
+                  type="date"
+                  id="cleaning-date"
+                  name="cleaning-date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="cleaning-time">Preferred Time:</label>
+                <select id="cleaning-time" name="cleaning-time" required>
+                  <option value="" disabled selected>
+                    -- Select a time --
+                  </option>
+                  <option value="morning">Morning (08:00 - 12:00)</option>
+                  <option value="afternoon">Afternoon (12:00 - 16:00)</option>
+                  <option value="evening">Evening (16:00 - 19:00)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="space-size">Number of Rooms / Space Size:</label>
+              <input
+                type="text"
+                id="space-size"
+                name="space-size"
+                required
+                placeholder="e.g., 3 bedrooms, 2 bathrooms"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-group">
+              <label for="booking-message">Additional Notes:</label>
+              <textarea
+                id="booking-message"
+                name="booking-message"
+                required
+                rows="5"
+                minlength="10"
+                maxlength="500"
+                placeholder="Any details about your space or special requests? Helps us prepare for a perfect clean."
+              ></textarea>
+              <div
+                class="booking-error-message"
+                id="booking-message-error"
+                role="alert"
+              ></div>
+            </div>
+            <button type="submit" class="booking-btn">Book My Cleaning</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-wrapper">
+        <div class="footer-section">
+          <a href="/" class="footer-logo">
+            <img
+              src="image/hichaya-logo.webp"
+              alt="Hichaya Logo - Reliable Cleaning for homes & offices"
+              width="344"
+              height="102"
+            />
+          </a>
+          <p class="brand-description">
+            Reliable, detail-focused cleaning that helps homes and businesses
+            stay spotless.
+          </p>
+          <ul class="social-icons">
+            <li>
+              <a href="#" onclick="event.preventDefault()" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="about.html" aria-label="Learn more about Hichaya"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="services.html" aria-label="Explore our cleaning services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" aria-label="Get in touch with us"
+                >Contact / Get a Free Quote</a
+              >
+            </li>
+            <li>
+              <a href="booking.html">Book a Cleaning</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Policies -->
+        <div class="footer-section">
+          <h3>Policies</h3>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="privacy-policy.html"
+                onclick="event.preventDefault()"
+                aria-label="Read our privacy policy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="terms-of-service.html"
+                onclick="event.preventDefault()"
+                aria-label="Read our terms and conditions"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Contact Information -->
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            <i class="fa-solid fa-phone" aria-hidden="true"></i> +123 456 789
+            1011
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            contact@hichaya.com
+          </p>
+          <p>
+            <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i> 123
+            Sparkle Street, Spotless Avenue.
+          </p>
+        </div>
+        <!-- Opening Hours -->
+        <div class="footer-section">
+          <h3>Opening Hours</h3>
+          <p><span>Mon - Sat</span>: 08:00 - 19:00</p>
+          <p><span>Sun</span>: Closed</p>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; 2026 Hichaya Services | Built by
+        <a href="https://chijiokenwabasili.vercel.app" target="_blank"
+          >Chijioke Nwabasili</a
+        >
+      </p>
+      <a href="#" aria-label="Scroll to the top" class="back-to-top-btn">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      </a>
+    </footer>
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/booking.js"></script>
+  </body>
+</html>
